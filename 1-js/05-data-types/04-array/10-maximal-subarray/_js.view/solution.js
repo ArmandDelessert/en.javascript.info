@@ -5,7 +5,7 @@ function getMaxSubSum(arr) {
   for (let item of arr) {
     partialSum += item;
     maxSum = Math.max(maxSum, partialSum);
-    if (partialSum < 0) partialSum = 0;
+    partialSum = Math.max(partialSum, 0);
   }
   return maxSum;
 }

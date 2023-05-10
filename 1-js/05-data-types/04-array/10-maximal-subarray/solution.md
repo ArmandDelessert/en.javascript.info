@@ -25,11 +25,11 @@ For instance, for `[-1, 2, 3, -9, 11]`:
 3 + (-9)
 3 + (-9) + 11
 
-// Starting from -9
+// Starting from -9:
 -9
 -9 + 11
 
-// Starting from 11
+// Starting from 11:
 11
 ```
 
@@ -75,7 +75,7 @@ function getMaxSubSum(arr) {
   for (let item of arr) { // for each item of arr
     partialSum += item; // add it to partialSum
     maxSum = Math.max(maxSum, partialSum); // remember the maximum
-    if (partialSum < 0) partialSum = 0; // zero if negative
+    partialSum = Math.max(partialSum, 0); // zero if negative
   }
 
   return maxSum;
