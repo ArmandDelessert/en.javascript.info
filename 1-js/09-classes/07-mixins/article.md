@@ -24,10 +24,10 @@ For instance here the mixin `sayHiMixin` is used to add some "speech" for `User`
 */!*
 let sayHiMixin = {
   sayHi() {
-    alert(`Hello ${this.name}`);
+    alert(`Hello ${this.name}!`);
   },
   sayBye() {
-    alert(`Bye ${this.name}`);
+    alert(`Bye ${this.name}!`);
   }
 };
 
@@ -75,10 +75,10 @@ let sayHiMixin = {
     *!*
     // call parent method
     */!*
-    super.say(`Hello ${this.name}`); // (*)
+    super.say(`Hello ${this.name}!`); // (*)
   },
   sayBye() {
-    super.say(`Bye ${this.name}`); // (*)
+    super.say(`Bye ${this.name}!`); // (*)
   }
 };
 
